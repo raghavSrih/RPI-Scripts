@@ -10,7 +10,7 @@ Scripts related to Raspberry Pi
       sudo apt-get upgrade
      ```
   2. Install the MeschAP using the installer given MeschAP/Installer.sh
-    ```
+      ```
       cd RPI-Scripts/MeschAP
       ./Installer.sh
     ```
