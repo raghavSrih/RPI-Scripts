@@ -13,5 +13,5 @@ Scripts related to Raspberry Pi
       ```
       cd RPI-Scripts/MeschAP
       ./Installer.sh
-    ```
+      ```
   3. Restart the Pi
