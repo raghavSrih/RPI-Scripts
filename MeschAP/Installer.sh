@@ -21,9 +21,9 @@ fi
 sudo apt-get install dnsmasq
 if [ `echo $?` -eq 0 ]
 then
-        echo "Installation of hostapd package is successful"
+        echo "Installation of dnsmasq package is successful"
 else
-        echo "Could not install hostapd package.. Exiting. Please check the logfile $logfile"
+        echo "Could not install dnsmasq package.. Exiting. Please check the logfile $logfile"
         exit 1
 fi
 
