@@ -1,0 +1,13 @@
+[Unit]
+Description=Script to run leapd after network is up
+After=network-online.target
+
+[Service]
+Type=simple
+User=pi
+RemainAfterExit=true
+WorkingDirectory=/home/pi/RPI-Scripts-master/TmuxOnBoot
+ExecStart=/bin/sh /home/pi/RPI-Scripts-master/TmuxOnBoot/start_tmux.sh
+
+[Install]
+WantedBy=multi-user.target
