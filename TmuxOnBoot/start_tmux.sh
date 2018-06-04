@@ -1,6 +1,9 @@
 #!/bin/bash
 
-logfile='/home/pi/RPI-Scripts-master/TmuxOnBoot/tmuxstart.log'
+Pr_dir=`pwd`
+usr=`whoami`
+
+logfile=$Pr_dir'/tmuxstart.log'
 
 > $logfile
 
@@ -12,7 +15,9 @@ logfile='/home/pi/RPI-Scripts-master/TmuxOnBoot/tmuxstart.log'
 
 /usr/bin/tmux set-option -t sess1 set-remain-on-exit on
 
-/usr/bin/tmux new-window -d -n 'trial' -t sess1:1 'sudo /home/pi/RPI-Scripts-master/TmuxOnBoot/trial.sh >> /home/pi/RPI-Scripts-master/TmuxOnBoot/tmuxstart.log'
+/usr/bin/tmux new-window -d -n 'trial' -t sess1:1 "sudo ${Pr_dir}/trial.sh >> $logfile"
+
+#/usr/bin/tmux a -t sess1 "sudo ${Pr_dir}/trial.sh >> $logfile"
 
 #tmux kill-session -t sessionname
 
